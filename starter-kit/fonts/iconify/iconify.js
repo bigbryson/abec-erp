@@ -23,7 +23,10 @@ const conf = (() => {
 
 // Icon sources
 const sources = {
-  json: [require.resolve('@iconify/json/json/ri.json')]
+  json: [
+    require.resolve('@iconify/json/json/ri.json'),
+    require.resolve('@iconify/json/json/bx.json')
+  ]
 };
 
 // CSS target path for generated icons
@@ -108,7 +111,7 @@ const cssTarget = path.resolve(__dirname, '../../' + conf.distPath.replace(/^\.\
       .map(iconSet =>
         getIconsCSS(iconSet, Object.keys(iconSet.icons), {
           iconSelector: '.{prefix}-{name}',
-          commonSelector: '.ri',
+          commonSelector: `.${iconSet.prefix}`,
           format: conf.minify ? 'compressed' : 'expanded'
         })
       )
