@@ -1,0 +1,86 @@
+<div class="card app-calendar-wrapper">
+  <div class="row g-0">
+    <div class="col app-calendar-sidebar" id="app-calendar-sidebar">
+      <div class="p-4">
+        <div class="d-grid">
+          <button
+            class="btn btn-primary btn-add-event"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#addEventSidebar"
+            aria-controls="addEventSidebar">
+            <i class="ri-add-line me-1"></i>
+            <span class="align-middle">Add Event</span>
+          </button>
+        </div>
+        
+        <div class="mt-4">
+          <p class="text-uppercase text-muted small fw-medium">Event Filters</p>
+          <div class="form-check form-check-secondary mb-2">
+            <input class="form-check-input select-all" type="checkbox" id="selectAll" checked />
+            <label class="form-check-label" for="selectAll">View All</label>
+          </div>
+          <div class="app-calendar-events-filter">
+            <div class="form-check form-check-danger mb-2">
+              <input class="form-check-input input-filter" type="checkbox" id="filter-inspection" data-value="Inspection" checked />
+              <label class="form-check-label" for="filter-inspection">Inspections</label>
+            </div>
+            <div class="form-check form-check-warning mb-2">
+              <input class="form-check-input input-filter" type="checkbox" id="filter-milestone" data-value="Milestone" checked />
+              <label class="form-check-label" for="filter-milestone">Milestones</label>
+            </div>
+            <div class="form-check form-check-success mb-2">
+              <input class="form-check-input input-filter" type="checkbox" id="filter-payment" data-value="Payment" checked />
+              <label class="form-check-label" for="filter-payment">Payments</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col app-calendar-content">
+      <div class="card shadow-none border-0">
+        <div class="card-body pb-0">
+          <div id="calendar"></div> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end event-sidebar" tabindex="-1" id="addEventSidebar" aria-labelledby="addEventSidebarLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title" id="addEventSidebarLabel">Project Event</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <form class="event-form pt-0" id="eventForm" onsubmit="return false">
+        <div class="mb-3">
+          <label class="form-label" for="eventTitle">Event Title</label>
+          <input type="text" class="form-control" id="eventTitle" name="eventTitle" placeholder="e.g. Concrete Pour" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="eventLabel">Category</label>
+          <select class="select2 form-select" id="eventLabel" name="eventLabel">
+            <option value="Inspection">Inspection</option>
+            <option value="Milestone">Milestone</option>
+            <option value="Payment">Payment</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="eventStartDate">Start Date</label>
+          <input type="text" class="form-control" id="eventStartDate" name="eventStartDate" placeholder="Start Date" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="eventEndDate">End Date</label>
+          <input type="text" class="form-control" id="eventEndDate" name="eventEndDate" placeholder="End Date" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="eventDescription">Description / Notes</label>
+          <textarea class="form-control" name="eventDescription" id="eventDescription"></textarea>
+        </div>
+        <div class="d-flex justify-content-start">
+          <button type="submit" class="btn btn-primary btn-add-event me-sm-3 me-1">Save to Project</button>
+          <button type="reset" class="btn btn-outline-danger btn-delete-event d-none">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

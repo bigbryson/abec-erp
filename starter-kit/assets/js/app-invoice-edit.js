@@ -62,12 +62,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     taxInput1,
     taxInput2,
     sourceItem = $('.source-item'),
-    adminDetails = {
-      'App Design': 'Designed UI kit & app pages.',
-      'App Customization': 'Customization & Bug Fixes.',
-      'ABC Template': 'Bootstrap 4 admin template.',
-      'App Development': 'Native App Development.'
-    };
+    adminDetails = {};
 
   // Prevent dropdown from closing on tax change
   $(document).on('click', '.tax-select', function (e) {

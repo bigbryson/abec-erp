@@ -1,0 +1,62 @@
+<div class="app-chat card overflow-hidden">
+  <div class="row g-0">
+    <div class="col app-chat-contacts app-sidebar flex-grow-0 overflow-hidden border-end" id="app-chat-contacts">
+      <div class="sidebar-header">
+        <div class="d-flex align-items-center me-3 me-lg-0">
+          <div class="flex-grow-1 input-group input-group-merge round-pill">
+            <span class="input-group-text" id="basic-addon-search31"><i class="ri-search-line"></i></span>
+            <input type="text" class="form-control chat-search-input" placeholder="Search projects or contacts..." aria-label="Search..." aria-describedby="basic-addon-search31" />
+          </div>
+        </div>
+        <i class="ri-close-line ri-24px cursor-pointer position-absolute top-0 end-0 mt-3 me-3 d-lg-none d-block" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-contacts"></i>
+      </div>
+      <hr class="container-m-n m-0" />
+      <div class="sidebar-body">
+        <ul class="list-unstyled chat-contact-list" id="chat-list">
+          <li class="chat-contact-list-item chat-list-item-0 d-none">
+            <h6 class="text-muted fw-normal mb-0">No active threads</h6>
+          </li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="col app-chat-history">
+      <div class="chat-history-wrapper">
+        <div class="chat-history-header border-bottom">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex overflow-hidden align-items-center">
+              <i class="ri-menu-line ri-24px cursor-pointer d-lg-none d-block me-3" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-contacts"></i>
+              <div class="flex-shrink-0 avatar">
+                <span id="active-chat-avatar" class="avatar-initial rounded-circle bg-label-primary">P</span>
+              </div>
+              <div class="chat-contact-info flex-grow-1 ms-3">
+                <h6 class="m-0" id="active-chat-title">Select a Project</h6>
+                <small class="user-status text-body" id="active-chat-subtitle">Communication Hub</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="chat-history-body">
+          <ul class="list-unstyled chat-history" id="message-feed">
+            <li class="text-center mt-4">
+              <p class="text-muted">Select a conversation to view notes.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="chat-history-footer shadow-sm">
+          <form class="form-send-message d-flex justify-content-between align-items-center">
+            <input class="form-control message-input border-0 me-3 shadow-none" placeholder="Type your note or update here..." />
+            <div class="message-actions d-flex align-items-center">
+              <i class="ri-attachment-2 cursor-pointer ri-24px mx-2"></i>
+              <button class="btn btn-primary d-flex send-msg-btn">
+                <span class="align-middle">Send</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
